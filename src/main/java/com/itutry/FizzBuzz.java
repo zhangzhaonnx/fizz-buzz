@@ -25,6 +25,7 @@ public class FizzBuzz {
     List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()
         .sorted()
         .filter(i -> num % i == 0)
+        .filter(i -> i != 3 || !numStr.contains("5"))
         .collect(Collectors.toList());
 
     if (!divisibleNum.isEmpty()) {
