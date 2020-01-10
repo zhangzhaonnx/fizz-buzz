@@ -11,18 +11,20 @@ public class FizzBuzz {
   private static String getFizzBuzzString(int num) {
     String result = "";
 
-    boolean isContains5 = isContains(num, 5) && !isContains(num, 7);
+    boolean isContains7 = isContains(num, 7);
+    boolean isContains5 = isContains(num, 5) && !isContains7;
     if (isVisible(num, 3) && !isContains5) {
       result += "Fizz";
     }
-    if (isVisible(num, 5) && !isContains(num, 7)) {
+    if (isVisible(num, 5) && !isContains7) {
       result += "Buzz";
     }
     if (isVisible(num, 7)) {
       result += "Whizz";
     }
 
-    if (isContains(num, 3) && !isContains5) {
+    boolean isContains3 = isContains(num, 3) && !isContains5;
+    if (isContains3) {
       result = "Fizz";
     }
 
