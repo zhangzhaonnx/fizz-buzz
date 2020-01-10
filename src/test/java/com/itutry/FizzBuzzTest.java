@@ -51,4 +51,13 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("FizzBuzz"));
   }
+
+  @Test
+  public void fizzBuzz_should_return_FizzBuzzWhizz_for_number_divisible_3_and_5_and_7() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(105);
+
+    Assert.assertThat(value, is("FizzBuzzWhizz"));
+  }
 }
