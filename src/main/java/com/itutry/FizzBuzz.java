@@ -10,6 +10,7 @@ public class FizzBuzz {
   static {
     TRANSFER_MAP.put(3, "Fizz");
     TRANSFER_MAP.put(5, "Buzz");
+    TRANSFER_MAP.put(7, "Whizz");
   }
 
   public String fizzBuzz(int num) {
