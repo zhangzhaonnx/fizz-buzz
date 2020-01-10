@@ -12,9 +12,7 @@ public class FizzBuzz {
     boolean isDivisible7 = num % 7 == 0;
 
     String numStr = String.valueOf(num);
-    if (numStr.contains("7")) {
-      isDivisible5 = false;
-    } else if (numStr.contains("5")) {
+    if (numStr.contains("5")) {
       isDivisible3 = false;
     } else if (numStr.contains("3")) {
       return FIZZ;
