@@ -11,31 +11,31 @@ public class FizzBuzz {
   private static String getFizzBuzzString(int num) {
     String result = "";
 
-    boolean isContains7 = isContains(num, 7);
-    boolean isContains5 = isContains(num, 5) && !isContains7;
-    if (isVisible(num, 3) && !isContains5) {
+    boolean contains7 = contains(num, 7);
+    boolean contains5 = contains(num, 5) && !contains7;
+    if (divisible(num, 3) && !contains5) {
       result += "Fizz";
     }
-    if (isVisible(num, 5) && !isContains7) {
+    if (divisible(num, 5) && !contains7) {
       result += "Buzz";
     }
-    if (isVisible(num, 7)) {
+    if (divisible(num, 7)) {
       result += "Whizz";
     }
 
-    boolean isContains3 = isContains(num, 3) && !isContains5;
-    if (isContains3) {
+    boolean contains3 = contains(num, 3) && !contains5;
+    if (contains3) {
       result = "Fizz";
     }
 
    return result;
   }
 
-  public static boolean isVisible(int num, int divisor) {
+  public static boolean divisible(int num, int divisor) {
     return num % divisor == 0;
   }
 
-  public static boolean isContains(int num, int aNum) {
+  public static boolean contains(int num, int aNum) {
     return String.valueOf(num).contains(String.valueOf(aNum));
   }
 }
