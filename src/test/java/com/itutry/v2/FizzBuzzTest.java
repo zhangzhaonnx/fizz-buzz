@@ -93,7 +93,7 @@ public class FizzBuzzTest {
 
   @Test
   public void handle_should_return_BuzzWhizz_for_number_contains_7_and_5() {
-    String value = FizzBuzz.handle(75);
+    String value = FizzBuzz.handle(57);
 
     Assert.assertThat(value, is("Fizz"));
   }
