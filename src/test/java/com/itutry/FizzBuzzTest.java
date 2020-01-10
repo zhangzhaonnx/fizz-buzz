@@ -78,4 +78,13 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("Fizz"));
   }
+
+  @Test
+  public void fizzBuzz_should_ignore_include_3_rule_for_number_include_5() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(35);
+
+    Assert.assertThat(value, is("BuzzFizz"));
+  }
 }
