@@ -9,8 +9,15 @@ public class FizzBuzzTest {
 
   @Test
   public void handle_should_return_original_for_ordinary_number() {
-      String value = FizzBuzz.handle(2);
+    String value = FizzBuzz.handle(2);
 
     Assert.assertThat(value, is("2"));
+  }
+
+  @Test
+  public void handle_should_return_Fizz_for_number_divisible_3() {
+    String value = FizzBuzz.handle(3);
+
+    Assert.assertThat(value, is("Fizz"));
   }
 }
