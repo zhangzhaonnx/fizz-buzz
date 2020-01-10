@@ -15,7 +15,7 @@ public class FizzBuzz {
     if (isVisible(num, 3) && !isContains5) {
       result += "Fizz";
     }
-    if (isVisible(num, 5)) {
+    if (isVisible(num, 5) && !isContains(num, 7)) {
       result += "Buzz";
     }
     if (isVisible(num, 7)) {
