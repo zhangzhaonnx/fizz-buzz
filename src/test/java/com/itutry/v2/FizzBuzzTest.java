@@ -85,16 +85,23 @@ public class FizzBuzzTest {
   }
 
   @Test
-  public void handle_should_return_BuzzWhizz_for_number_contains_5_and_divisible_3() {
+  public void handle_should_return_Buzz_for_number_contains_5_and_divisible_3() {
     String value = FizzBuzz.handle(15);
 
     Assert.assertThat(value, is("Buzz"));
   }
 
   @Test
-  public void handle_should_return_BuzzWhizz_for_number_contains_7_and_5() {
+  public void handle_should_return_Fizz_for_number_contains_7_and_5() {
     String value = FizzBuzz.handle(57);
 
     Assert.assertThat(value, is("Fizz"));
+  }
+
+  @Test
+  public void handle_should_return_Whizz_for_number_contains_7_and_divisible_5() {
+    String value = FizzBuzz.handle(70);
+
+    Assert.assertThat(value, is("Whizz"));
   }
 }
