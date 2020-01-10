@@ -101,7 +101,16 @@ public class FizzBuzzTest {
   public void fizzBuzz_should_ignore_include_5_rule_for_number_include_7() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String value = fizzBuzz.fizzBuzz(75);
+    String value = fizzBuzz.fizzBuzz(37);
+
+    Assert.assertThat(value, is("Fizz"));
+  }
+
+  @Test
+  public void fizzBuzz_should_return_Fizz_rule_for_number_37() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(37);
 
     Assert.assertThat(value, is("Fizz"));
   }
