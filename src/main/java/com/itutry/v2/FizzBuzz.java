@@ -21,7 +21,7 @@ public class FizzBuzz {
       result += "Whizz";
     }
 
-    if (String.valueOf(num).contains("3")) {
+    if (String.valueOf(num).contains("3") && !String.valueOf(num).contains("5")) {
       result = "Fizz";
     }
 
