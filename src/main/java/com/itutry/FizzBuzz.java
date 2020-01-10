@@ -1,7 +1,10 @@
 package com.itutry;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class FizzBuzz {
 
@@ -14,10 +17,15 @@ public class FizzBuzz {
   }
 
   public String fizzBuzz(int num) {
-    for (int i: TRANSFER_MAP.keySet()) {
+    List<Integer> divisibleNum = new ArrayList<>();
+    for (int i : TRANSFER_MAP.keySet()) {
       if (num % i == 0) {
-        return TRANSFER_MAP.get(i);
+        divisibleNum.add(i);
       }
+    }
+
+    if (!divisibleNum.isEmpty()) {
+      return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
     }
 
     return String.valueOf(num);
