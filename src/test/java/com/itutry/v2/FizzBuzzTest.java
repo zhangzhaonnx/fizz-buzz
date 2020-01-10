@@ -62,4 +62,11 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("FizzBuzzWhizz"));
   }
+
+  @Test
+  public void handle_should_return_Fizz_for_number_contains_3() {
+    String value = FizzBuzz.handle(13);
+
+    Assert.assertThat(value, is("Fizz"));
+  }
 }
