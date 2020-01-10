@@ -12,11 +12,19 @@ public class FizzBuzz {
     boolean isDivisible7 = num % 7 == 0;
 
     String numStr = String.valueOf(num);
-    if (numStr.contains("7")) {
+    boolean isInclude3 = numStr.contains("3");
+    boolean isInclude5 = numStr.contains("5");
+    boolean isInclude7 = numStr.contains("7");
+
+    if (isInclude7) {
+      isInclude5 = false;
       isDivisible5 = false;
-    } else if (numStr.contains("5")) {
+    }
+    if (isInclude5) {
+      isInclude3 = false;
       isDivisible3 = false;
-    } else if (numStr.contains("3")) {
+    }
+    if (isInclude3) {
       return FIZZ;
     }
 
