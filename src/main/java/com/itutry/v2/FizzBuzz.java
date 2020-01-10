@@ -3,6 +3,9 @@ package com.itutry.v2;
 public class FizzBuzz {
 
   public static String handle(int num) {
+    if (isVisible(num, 3) && isVisible(num, 5) && isVisible(num,7)) {
+      return "FizzBuzzWhizz";
+    }
     if (isVisible(num, 5) && isVisible(num, 7)) {
       return "BuzzWhizz";
     }
