@@ -33,4 +33,13 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("Buzz"));
   }
+
+  @Test
+  public void fizzBuzz_should_return_Whizz_for_7() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(7);
+
+    Assert.assertThat(value, is("Whizz"));
+  }
 }
