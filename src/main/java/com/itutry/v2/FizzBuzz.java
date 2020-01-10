@@ -10,6 +10,7 @@ public class FizzBuzz {
 
   private static String getFizzBuzzString(int num) {
     String result = "";
+
     if (isVisible(num, 3)) {
       result += "Fizz";
     }
@@ -19,6 +20,11 @@ public class FizzBuzz {
     if (isVisible(num, 7)) {
       result += "Whizz";
     }
+
+    if (String.valueOf(num).contains("3")) {
+      result = "Fizz";
+    }
+
    return result;
   }
 
