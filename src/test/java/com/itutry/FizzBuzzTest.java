@@ -87,4 +87,13 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("BuzzWhizz"));
   }
+
+  @Test
+  public void fizzBuzz_should_ignore_divisible_3_rule_for_number_include_5() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(15);
+
+    Assert.assertThat(value, is("Buzz"));
+  }
 }
