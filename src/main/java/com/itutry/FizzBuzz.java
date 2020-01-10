@@ -1,6 +1,7 @@
 package com.itutry;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,8 +19,13 @@ public class FizzBuzz {
 
   public String fizzBuzz(int num) {
     String numStr = String.valueOf(num);
-    if (numStr.contains("3") && !numStr.contains("5")) {
-      return "Fizz";
+    Integer includeNum = TRANSFER_MAP.keySet().stream()
+        .sorted(Comparator.reverseOrder())
+        .filter(i -> numStr.contains(String.valueOf(i)))
+        .findFirst()
+        .orElse(null);
+    if (includeNum != null && includeNum == 3) {
+      return TRANSFER_MAP.get(includeNum);
     }
 
     List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()

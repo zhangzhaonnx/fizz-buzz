@@ -56,7 +56,7 @@ public class FizzBuzzTest {
   public void fizzBuzz_should_return_FizzBuzzWhizz_for_number_divisible_3_and_5_and_7() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
-    String value = fizzBuzz.fizzBuzz(105);
+    String value = fizzBuzz.fizzBuzz(420);
 
     Assert.assertThat(value, is("FizzBuzzWhizz"));
   }
