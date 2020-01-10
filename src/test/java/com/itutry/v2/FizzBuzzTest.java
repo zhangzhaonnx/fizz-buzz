@@ -37,7 +37,7 @@ public class FizzBuzzTest {
 
   @Test
   public void handle_should_return_FizzBuzz_for_number_divisible_3_and_5() {
-    String value = FizzBuzz.handle(15);
+    String value = FizzBuzz.handle(60);
 
     Assert.assertThat(value, is("FizzBuzz"));
   }
@@ -58,7 +58,7 @@ public class FizzBuzzTest {
 
   @Test
   public void handle_should_return_FizzBuzzWhizz_for_number_divisible_3_and_5_and_7() {
-    String value = FizzBuzz.handle(105);
+    String value = FizzBuzz.handle(210);
 
     Assert.assertThat(value, is("FizzBuzzWhizz"));
   }
