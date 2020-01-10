@@ -7,7 +7,8 @@ import org.junit.Test;
 
 public class FizzBuzzTest {
 
-  @Test  public void fizzBuzz_should_return_2_for_2() {
+  @Test
+  public void fizzBuzz_should_return_2_for_2() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     String value = fizzBuzz.fizzBuzz(2);
