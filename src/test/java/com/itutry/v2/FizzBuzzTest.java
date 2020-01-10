@@ -3,6 +3,7 @@ package com.itutry.v2;
 import static org.hamcrest.CoreMatchers.is;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class FizzBuzzTest {
@@ -117,5 +118,13 @@ public class FizzBuzzTest {
     String value = FizzBuzz.handle(357);
 
     Assert.assertThat(value, is("Fizz"));
+  }
+
+  @Test
+  @Ignore
+  public void print_all_result_from_1_to_120() {
+    for (int i = 1; i <= 120; i++) {
+      System.out.println(FizzBuzz.handle(i));
+    }
   }
 }
