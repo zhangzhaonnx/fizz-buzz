@@ -3,6 +3,12 @@ package com.itutry.v2;
 public class FizzBuzz {
 
   public static String handle(int num) {
+    String result = getFizzBuzzString(num);
+
+    return result.isEmpty() ? String.valueOf(num) : result;
+  }
+
+  private static String getFizzBuzzString(int num) {
     String result = "";
     if (isVisible(num, 3)) {
       result = "Fizz";
@@ -27,8 +33,7 @@ public class FizzBuzz {
     if (isVisible(num, 3) && isVisible(num, 5) && isVisible(num,7)) {
       result = "FizzBuzzWhizz";
     }
-
-    return result.isEmpty() ? String.valueOf(num) : result;
+    return result;
   }
 
   public static boolean isVisible(int num, int divisor) {
