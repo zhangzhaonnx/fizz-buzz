@@ -1,4 +1,4 @@
-package com.itutry;
+package com.itutry.v1;
 
 public class FizzBuzz {
 
