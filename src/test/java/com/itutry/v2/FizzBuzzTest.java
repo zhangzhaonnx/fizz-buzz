@@ -90,4 +90,11 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("Buzz"));
   }
+
+  @Test
+  public void handle_should_return_BuzzWhizz_for_number_contains_7_and_5() {
+    String value = FizzBuzz.handle(75);
+
+    Assert.assertThat(value, is("Fizz"));
+  }
 }
