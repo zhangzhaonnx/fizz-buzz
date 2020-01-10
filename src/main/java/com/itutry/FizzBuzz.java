@@ -23,21 +23,22 @@ public class FizzBuzz {
         .sorted(Comparator.reverseOrder())
         .filter(i -> numStr.contains(String.valueOf(i)))
         .findFirst()
-        .orElse(null);
-    if (includeNum != null && includeNum == 3) {
+        .orElse(-1);
+
+    if (includeNum == 3) {
       return TRANSFER_MAP.get(includeNum);
     }
 
     List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()
         .sorted()
         .filter(i -> num % i == 0)
-        .filter(i -> i != 3 || !numStr.contains("5"))
+        .filter(i -> i != 3 || includeNum != 5)
         .collect(Collectors.toList());
 
     if (!divisibleNum.isEmpty()) {
       return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
     }
 
-    return String.valueOf(num);
+    return numStr;
   }
 }
