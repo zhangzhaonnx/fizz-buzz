@@ -17,12 +17,10 @@ public class FizzBuzz {
   }
 
   public String fizzBuzz(int num) {
-    List<Integer> divisibleNum = new ArrayList<>();
-    for (int i : TRANSFER_MAP.keySet()) {
-      if (num % i == 0) {
-        divisibleNum.add(i);
-      }
-    }
+    List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()
+        .sorted()
+        .filter(i -> num % i == 0)
+        .collect(Collectors.toList());
 
     if (!divisibleNum.isEmpty()) {
       return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
