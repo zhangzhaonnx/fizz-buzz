@@ -60,4 +60,13 @@ public class FizzBuzzTest {
 
     Assert.assertThat(value, is("FizzBuzzWhizz"));
   }
+
+  @Test
+  public void fizzBuzz_should_return_Fizz_for_number_include_3() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(13);
+
+    Assert.assertThat(value, is("Fizz"));
+  }
 }

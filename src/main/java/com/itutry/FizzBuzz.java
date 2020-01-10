@@ -26,6 +26,10 @@ public class FizzBuzz {
       return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
     }
 
+    if (String.valueOf(num).contains("3")) {
+      return "Fizz";
+    }
+
     return String.valueOf(num);
   }
 }
