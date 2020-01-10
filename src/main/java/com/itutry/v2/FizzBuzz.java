@@ -11,29 +11,15 @@ public class FizzBuzz {
   private static String getFizzBuzzString(int num) {
     String result = "";
     if (isVisible(num, 3)) {
-      result = "Fizz";
+      result += "Fizz";
     }
     if (isVisible(num, 5)) {
-      result = "Buzz";
+      result += "Buzz";
     }
     if (isVisible(num, 7)) {
-      result = "Whizz";
+      result += "Whizz";
     }
-
-    if (isVisible(num, 5) && isVisible(num, 7)) {
-      result = "BuzzWhizz";
-    }
-    if (isVisible(num, 3) && isVisible(num, 7)) {
-      result = "FizzWhizz";
-    }
-    if (isVisible(num, 3) && isVisible(num, 5)) {
-      result = "FizzBuzz";
-    }
-
-    if (isVisible(num, 3) && isVisible(num, 5) && isVisible(num,7)) {
-      result = "FizzBuzzWhizz";
-    }
-    return result;
+   return result;
   }
 
   public static boolean isVisible(int num, int divisor) {
