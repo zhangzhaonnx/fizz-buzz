@@ -11,7 +11,8 @@ public class FizzBuzz {
   private static String getFizzBuzzString(int num) {
     String result = "";
 
-    if (isVisible(num, 3) && !String.valueOf(num).contains("5")) {
+    boolean isContains5 = String.valueOf(num).contains("5");
+    if (isVisible(num, 3) && !isContains5) {
       result += "Fizz";
     }
     if (isVisible(num, 5)) {
@@ -21,7 +22,7 @@ public class FizzBuzz {
       result += "Whizz";
     }
 
-    if (String.valueOf(num).contains("3") && !String.valueOf(num).contains("5")) {
+    if (String.valueOf(num).contains("3") && !isContains5) {
       result = "Fizz";
     }
 
