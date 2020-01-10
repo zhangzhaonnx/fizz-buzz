@@ -9,6 +9,9 @@ public class FizzBuzz {
     if (isVisible(num, 5)) {
       return "Buzz";
     }
+    if (isVisible(num, 7)) {
+      return "Whizz";
+    }
 
     return String.valueOf(num);
   }
