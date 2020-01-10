@@ -17,6 +17,10 @@ public class FizzBuzz {
   }
 
   public String fizzBuzz(int num) {
+    if (String.valueOf(num).contains("3")) {
+      return "Fizz";
+    }
+
     List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()
         .sorted()
         .filter(i -> num % i == 0)
@@ -24,10 +28,6 @@ public class FizzBuzz {
 
     if (!divisibleNum.isEmpty()) {
       return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
-    }
-
-    if (String.valueOf(num).contains("3")) {
-      return "Fizz";
     }
 
     return String.valueOf(num);
