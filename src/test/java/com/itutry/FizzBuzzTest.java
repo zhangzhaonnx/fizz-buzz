@@ -17,7 +17,7 @@ public class FizzBuzzTest {
   }
 
   @Test
-  public void fizzBuzz_should_return_Fizz_for_3() {
+  public void fizzBuzz_should_return_Fizz_for_number_divisible_3() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     String value = fizzBuzz.fizzBuzz(3);
@@ -26,7 +26,7 @@ public class FizzBuzzTest {
   }
 
   @Test
-  public void fizzBuzz_should_return_Buzz_for_5() {
+  public void fizzBuzz_should_return_Buzz_for_number_divisible_5() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     String value = fizzBuzz.fizzBuzz(5);
@@ -35,11 +35,20 @@ public class FizzBuzzTest {
   }
 
   @Test
-  public void fizzBuzz_should_return_Whizz_for_7() {
+  public void fizzBuzz_should_return_Whizz_for_number_divisible_7() {
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     String value = fizzBuzz.fizzBuzz(7);
 
     Assert.assertThat(value, is("Whizz"));
+  }
+
+  @Test
+  public void fizzBuzz_should_return_FizzBuzz_for_number_divisible_3_and_5() {
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    String value = fizzBuzz.fizzBuzz(15);
+
+    Assert.assertThat(value, is("FizzBuzz"));
   }
 }
