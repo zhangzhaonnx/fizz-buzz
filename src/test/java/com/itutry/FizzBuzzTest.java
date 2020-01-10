@@ -85,6 +85,6 @@ public class FizzBuzzTest {
 
     String value = fizzBuzz.fizzBuzz(35);
 
-    Assert.assertThat(value, is("BuzzFizz"));
+    Assert.assertThat(value, is("BuzzWhizz"));
   }
 }
