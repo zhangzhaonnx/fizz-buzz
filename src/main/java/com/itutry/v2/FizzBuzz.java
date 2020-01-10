@@ -11,7 +11,7 @@ public class FizzBuzz {
   private static String getFizzBuzzString(int num) {
     String result = "";
 
-    if (isVisible(num, 3)) {
+    if (isVisible(num, 3) && !String.valueOf(num).contains("5")) {
       result += "Fizz";
     }
     if (isVisible(num, 5)) {
