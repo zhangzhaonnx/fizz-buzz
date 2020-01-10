@@ -1,44 +1,36 @@
 package com.itutry;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 public class FizzBuzz {
 
-  private static Map<Integer, String> TRANSFER_MAP = new HashMap<>();
-
-  static {
-    TRANSFER_MAP.put(3, "Fizz");
-    TRANSFER_MAP.put(5, "Buzz");
-    TRANSFER_MAP.put(7, "Whizz");
-  }
+  public static final String FIZZ = "Fizz";
+  public static final String BUZZ = "Buzz";
+  public static final String WHIZZ = "Whizz";
 
   public String fizzBuzz(int num) {
+    boolean isDivisible3 = num % 3 == 0;
+    boolean isDivisible5 = num % 5 == 0;
+    boolean isDivisible7 = num % 7 == 0;
+
     String numStr = String.valueOf(num);
-    Integer includeNum = TRANSFER_MAP.keySet().stream()
-        .sorted(Comparator.reverseOrder())
-        .filter(i -> numStr.contains(String.valueOf(i)))
-        .findFirst()
-        .orElse(-1);
-
-    if (includeNum == 3) {
-      return TRANSFER_MAP.get(includeNum);
+    if (numStr.contains("7")) {
+      isDivisible5 = false;
+    } else if (numStr.contains("5")) {
+      isDivisible3 = false;
+    } else if (numStr.contains("3")) {
+      return FIZZ;
     }
 
-    List<Integer> divisibleNum = TRANSFER_MAP.keySet().stream()
-        .sorted()
-        .filter(i -> num % i == 0)
-        .filter(i -> i != 3 || includeNum != 5)
-        .collect(Collectors.toList());
-
-    if (!divisibleNum.isEmpty()) {
-      return divisibleNum.stream().map(i -> TRANSFER_MAP.get(i)).collect(Collectors.joining());
+    String result = "";
+    if (isDivisible3) {
+      result += FIZZ;
+    }
+    if (isDivisible5) {
+      result += BUZZ;
+    }
+    if (isDivisible7) {
+      result += WHIZZ;
     }
 
-    return numStr;
+    return result.isEmpty() ? numStr : result;
   }
 }
