@@ -7,11 +7,14 @@ public class FizzBuzz {
     if (divisible(num, 3)) {
       result += "Fizz";
     }
-    if (divisible(num, 5)) {
+    if (divisible(num, 5) && !String.valueOf(num).contains("3")) {
       result += "Buzz";
     }
     if (divisible(num, 7)) {
       result += "Whizz";
+    }
+    if (String.valueOf(num).contains("3")) {
+      result = "Fizz";
     }
 
     return result.isEmpty() ? String.valueOf(num) : result;

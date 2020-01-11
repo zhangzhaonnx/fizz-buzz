@@ -46,4 +46,14 @@ public class FizzBuzzTest {
   public void handle_should_return_FizzBuzzWhizz_for_number_divisible_3_and_5_and_7() {
     Assert.assertThat(FizzBuzz.handle(210), is("FizzBuzzWhizz"));
   }
+
+  @Test
+  public void handle_should_return_Fizz_for_number_include_3() {
+    Assert.assertThat(FizzBuzz.handle(13), is("Fizz"));
+  }
+
+  @Test
+  public void handle_should_return_Fizz_for_number_include_3_and_divisible_5() {
+    Assert.assertThat(FizzBuzz.handle(30), is("Fizz"));
+  }
 }
