@@ -4,19 +4,20 @@ public class FizzBuzz {
 
   public static Object handle(int num) {
     String result = "";
-    if (num % 3 == 0) {
+    if (divisible(num, 3)) {
       result += "Fizz";
     }
-    if (num % 5 == 0) {
+    if (divisible(num, 5)) {
       result += "Buzz";
     }
-    if (num % 7 == 0) {
+    if (divisible(num, 7)) {
       result += "Whizz";
     }
-    if (!result.isEmpty()) {
-      return result;
-    }
 
-    return String.valueOf(num);
+    return result.isEmpty() ? String.valueOf(num) : result;
+  }
+
+  private static boolean divisible(int num, int aNum) {
+    return num % aNum == 0;
   }
 }
