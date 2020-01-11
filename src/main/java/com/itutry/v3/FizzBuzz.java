@@ -11,7 +11,7 @@ public class FizzBuzz {
     if (divisible(num, 3) && !contains5) {
       result += "Fizz";
     }
-    if (divisible(num, 5) && !contains3 && !contains7) {
+    if (divisible(num, 5) && !contains7) {
       result += "Buzz";
     }
     if (divisible(num, 7)) {
