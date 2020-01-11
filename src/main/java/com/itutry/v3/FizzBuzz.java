@@ -4,10 +4,10 @@ public class FizzBuzz {
 
   public static Object handle(int num) {
     String result = "";
-    if (divisible(num, 3)) {
+    if (divisible(num, 3) && !String.valueOf(num).contains("5")) {
       result += "Fizz";
     }
-    boolean contains3 = String.valueOf(num).contains("3");
+    boolean contains3 = String.valueOf(num).contains("3") && !String.valueOf(num).contains("5");
     if (divisible(num, 5) && !contains3) {
       result += "Buzz";
     }
