@@ -4,12 +4,12 @@ public class FizzBuzz {
 
   public static Object handle(int num) {
     String result = "";
-    boolean contains5 = contains(num, 5);
+    boolean contains5 = contains(num, 5) && !contains(num, 7);
     if (divisible(num, 3) && !contains5) {
       result += "Fizz";
     }
     boolean contains3 = contains(num, 3) && !contains5;
-    if (divisible(num, 5) && !contains3) {
+    if (divisible(num, 5) && !contains3 && !contains(num, 7)) {
       result += "Buzz";
     }
     if (divisible(num, 7)) {
