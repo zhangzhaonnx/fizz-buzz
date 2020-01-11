@@ -3,11 +3,14 @@ package com.itutry.v3;
 public class FizzBuzz {
 
   public static Object handle(int num) {
-    String result = "";
     boolean contains7 = contains(num, 7);
     boolean contains5 = contains(num, 5) && !contains7;
     boolean contains3 = contains(num, 3) && !contains5;
+    if (contains3) {
+      return  "Fizz";
+    }
 
+    String result = "";
     if (divisible(num, 3) && !contains5) {
       result += "Fizz";
     }
@@ -16,9 +19,6 @@ public class FizzBuzz {
     }
     if (divisible(num, 7)) {
       result += "Whizz";
-    }
-    if (contains3) {
-      result = "Fizz";
     }
 
     return result.isEmpty() ? String.valueOf(num) : result;
